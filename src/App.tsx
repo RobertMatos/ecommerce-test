@@ -32,8 +32,8 @@ export default function App() {
   }, [selected]);
 
   return (
-    <div className="min-h-screen w-full bg-gray-100 flex items-center justify-center">
-      <main className="w-full justify-center itens-center container mx-auto px-4 py-8 grid grid-cols-12 gap-8">
+    <div className="min-h-screen w-full bg-gray-100">
+      <main className="container mx-auto px-4 py-12 grid grid-cols-12 gap-8">
         <div className="col-span-12 md:col-span-4">
           <ImageGallery
             images={product.images}

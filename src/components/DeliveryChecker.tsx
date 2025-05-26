@@ -32,7 +32,9 @@ export default function DeliveryChecker() {
         setAddress(null);
       } else {
         setError(null);
-        setAddress(`${data.logradouro}, ${data.bairro}, ${data.localidade} - ${data.uf}`);
+        setAddress(
+          `${data.logradouro}, ${data.bairro}, ${data.localidade} - ${data.uf}`
+        );
       }
     } catch {
       setError("Erro ao consultar o CEP");
@@ -53,14 +55,19 @@ export default function DeliveryChecker() {
           type="text"
           placeholder="Digite seu CEP"
           value={cep}
-          onChange={e => setCep(e.target.value)}
+          onChange={(e) => setCep(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              checkCEP();
+            }
+          }}
           className="border rounded px-3 py-2 w-full focus:outline-blue-400"
           maxLength={9}
         />
         <button
           onClick={checkCEP}
           disabled={loading}
-          className="bg-blue-600 text-white px-4 rounded hover:bg-blue-700 transition disabled:opacity-50"
+          className="bg-blue-600 text-white font-bold px-4 rounded hover:bg-blue-700 transition disabled:opacity-50"
         >
           {loading ? "Carregando..." : "Verificar"}
         </button>

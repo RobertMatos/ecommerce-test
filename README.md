@@ -1,55 +1,63 @@
-# React + TypeScript + Vite
+# 🛒 E-commerce Product Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é uma implementação de uma página de produto para e-commerce, desenvolvida com React, TypeScript, Vite e Tailwind CSS. O objetivo é demonstrar habilidades em front-end, incluindo persistência de dados, integração com APIs externas, etc.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [API ViaCEP](https://viacep.com.br/)
 
-## Expanding the ESLint configuration
+## 📦 Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Galeria de Imagens**: Exibição de uma imagem principal do produto e miniaturas abaixo. Ao clicar em uma miniatura, a imagem principal é atualizada.
+- **Detalhes do Produto**: Exibição dinâmica do título e preço do produto.
+- **Seletores de Variantes**: Seleção de tamanho e cor do produto, gerados dinamicamente a partir de arrays ou objetos.
+- **Verificação de CEP**: Campo para inserção de CEP, que consulta a API ViaCEP e exibe o endereço completo se o CEP for válido.
+- **Persistência de Estado**: As ações do usuário são salvas e mantidas por 15 minutos, mesmo após a atualização da página.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 📸 Inspiração
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+A interface foi inspirada em páginas de produtos de grandes e-commerces como o site da Adidas, priorizando soluções práticas e flexíveis para futuras alterações.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🧪 Como Executar o Projeto
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
-# ecommerce-test
+1. Clone o repositório:
+
+   ```bash
+   git clone https://github.com/RobertMatos/ecommerce-test.git
+   ```
+
+2. Navegue até o diretório do projeto:
+
+   ```bash
+   cd ecommerce-test
+   ```
+
+3. Instale as dependências:
+
+   ```bash
+   npm install
+   ```
+
+4. Inicie o servidor de desenvolvimento:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Acesse o projeto no navegador:
+
+   ```
+   http://localhost:5173
+   ```
+
+## 📬 Demo
+
+- Link do projeto publicado na Vercel: [https://ecommerce-test.vercel.app](https://ecommerce-test.vercel.app)
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) para mais informações.

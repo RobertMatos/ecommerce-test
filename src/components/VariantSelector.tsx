@@ -22,11 +22,13 @@ export default function VariantSelector({ variants, selected, setSelected }: Var
             {options.map(option => (
               <button
                 key={option}
-                className={`px-4 py-2 rounded border ${
-                  selected[type] === option
-                    ? "bg-blue-600 text-white border-blue-600"
-                    : "bg-white text-gray-700 border-gray-300 hover:border-blue-400"
-                } transition`}
+                className={`px-4 py-2 rounded border transition
+                  ${
+                    selected[type] === option
+                      ? "!bg-black !text-white !font-bold border-black"
+                      : "bg-white text-gray-700 border-gray-300 hover:border-blue-400 hover:bg-black hover:text-white hover:font-light focus:bg-black focus:text-white focus:font-bold"
+                  }
+                `}
                 onClick={() => select(type, option)}
               >
                 {option}
