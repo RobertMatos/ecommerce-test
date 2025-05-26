@@ -56,7 +56,7 @@ A interface foi inspirada em páginas de produtos de grandes e-commerces como o 
 
 ## 📬 Demo
 
-- Link do projeto publicado na Vercel: [https://ecommerce-test.vercel.app](https://ecommerce-test.vercel.app)
+- Link do projeto publicado na Vercel: [https://ecommerce-test-4n4k.vercel.app/](https://ecommerce-test-4n4k.vercel.app/)
 
 ## 📄 Licença
 
